@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "68217818-1bbd-4836-a33f-b1dad030824f",
+		"name": "CervezasAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear Usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Entidad\":{\n\t\t\"Nombre\":\"Allan\",\n\t\t\"Apellido1\":\"Bejarano\",\n\t\t\"Alias\":\"allan355\",\n\t\t\"Contrasena\":123,\n\t\t\"admin\":true\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://allan355-001-site1.itempurl.com//api/usuario/add",
+					"protocol": "http",
+					"host": [
+						"allan355-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"usuario",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Entidad\":{\n\t\t\"Alias\":\"allan355\",\n\t\t\"Contrasena\":123\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://allan355-001-site1.itempurl.com//api/usuario/login",
+					"protocol": "http",
+					"host": [
+						"allan355-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"usuario",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Cerveza",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Entidad\":{\n\t\t\"Marca\":\"Pisen\",\n        \"Alcohol\":\"4.9\",\n        \"TipoId\":1,\n        \"PaisId\":1\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://allan355-001-site1.itempurl.com//api/Cerveza/add",
+					"protocol": "http",
+					"host": [
+						"allan355-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"Cerveza",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Todo Cerveza",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Entidad\":{\n\t\t\"Nombre\":\"Allan\",\n\t\t\"Apellido1\":\"Bejarano\",\n\t\t\"Alias\":\"allan355\",\n\t\t\"Contrasena\":123,\n\t\t\"admin\":true\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://allan355-001-site1.itempurl.com/api/Cerveza/all",
+					"protocol": "http",
+					"host": [
+						"allan355-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Cerveza",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Cerveza",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://allan355-001-site1.itempurl.com//api/Cerveza/1",
+					"protocol": "http",
+					"host": [
+						"allan355-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"Cerveza",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarConsumo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"entidad\":{\n\t\t\"UsuarioId\":3,\n\t\t\"CervezaId\":3,\n\t\t\"Consumo\":8\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://allan355-001-site1.itempurl.com//api/Cerveza/consumo/add",
+					"protocol": "http",
+					"host": [
+						"allan355-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"Cerveza",
+						"consumo",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Consumo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"entidad\":{\n\t\t\"UsuarioId\":11,\n\t\t\"CervezaId\":2,\n\t\t\"Consumo\":5\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://allan355-001-site1.itempurl.com/api/Cerveza/consumo?FechaInicio=2020-03-01&FechaFin=2020-03-01&id=null",
+					"protocol": "http",
+					"host": [
+						"allan355-001-site1",
+						"itempurl",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"Cerveza",
+						"consumo"
+					],
+					"query": [
+						{
+							"key": "FechaInicio",
+							"value": "2020-03-01"
+						},
+						{
+							"key": "FechaFin",
+							"value": "2020-03-01"
+						},
+						{
+							"key": "id",
+							"value": "null"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
